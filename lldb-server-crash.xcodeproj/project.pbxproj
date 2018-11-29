@@ -13,6 +13,8 @@
 		19B2C63721B058FD0090EC84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B2C63621B058FD0090EC84 /* Assets.xcassets */; };
 		19B2C63A21B058FD0090EC84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B2C63821B058FD0090EC84 /* LaunchScreen.storyboard */; };
 		19B2C63D21B058FD0090EC84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B2C63C21B058FD0090EC84 /* main.m */; };
+		19B2C64521B0592D0090EC84 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B2C64421B0592D0090EC84 /* MyView.m */; };
+		19B2C64821B059490090EC84 /* MyView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B2C64721B059490090EC84 /* MyView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		19B2C63921B058FD0090EC84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19B2C63B21B058FD0090EC84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19B2C63C21B058FD0090EC84 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		19B2C64321B0592D0090EC84 /* MyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
+		19B2C64421B0592D0090EC84 /* MyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
+		19B2C64621B059490090EC84 /* lldb-server-crash-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "lldb-server-crash-Bridging-Header.h"; sourceTree = "<group>"; };
+		19B2C64721B059490090EC84 /* MyView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +68,15 @@
 				19B2C62E21B058FC0090EC84 /* AppDelegate.m */,
 				19B2C63021B058FC0090EC84 /* ViewController.h */,
 				19B2C63121B058FC0090EC84 /* ViewController.m */,
+				19B2C64321B0592D0090EC84 /* MyView.h */,
+				19B2C64421B0592D0090EC84 /* MyView.m */,
+				19B2C64721B059490090EC84 /* MyView+Extension.swift */,
 				19B2C63321B058FC0090EC84 /* Main.storyboard */,
 				19B2C63621B058FD0090EC84 /* Assets.xcassets */,
 				19B2C63821B058FD0090EC84 /* LaunchScreen.storyboard */,
 				19B2C63B21B058FD0090EC84 /* Info.plist */,
 				19B2C63C21B058FD0090EC84 /* main.m */,
+				19B2C64621B059490090EC84 /* lldb-server-crash-Bridging-Header.h */,
 			);
 			path = "lldb-server-crash";
 			sourceTree = "<group>";
@@ -102,6 +112,7 @@
 				TargetAttributes = {
 					19B2C62921B058FC0090EC84 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -141,6 +152,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19B2C64521B0592D0090EC84 /* MyView.m in Sources */,
+				19B2C64821B059490090EC84 /* MyView+Extension.swift in Sources */,
 				19B2C63221B058FC0090EC84 /* ViewController.m in Sources */,
 				19B2C63D21B058FD0090EC84 /* main.m in Sources */,
 				19B2C62F21B058FC0090EC84 /* AppDelegate.m in Sources */,
@@ -285,7 +298,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X9D6T4AH6K;
 				INFOPLIST_FILE = "lldb-server-crash/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -293,6 +308,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sergeyne.lldb-server-crash";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "lldb-server-crash/lldb-server-crash-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -301,7 +319,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X9D6T4AH6K;
 				INFOPLIST_FILE = "lldb-server-crash/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -309,6 +329,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sergeyne.lldb-server-crash";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "lldb-server-crash/lldb-server-crash-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
